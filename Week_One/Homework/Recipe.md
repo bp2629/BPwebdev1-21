@@ -12,7 +12,7 @@ I grew up in Idaho. When I tell people this, one of two things happen: "Whats Id
 
 1. Prepare Potato by stabbing with fork, Creating little holes.
 2. Place in microwave ~ 5 minutes
-3. Take out with oven. 
+3. Take out with oven mitt 
 4. Slit with knife
 5. Place butter in potato and wait to melt
 6. Insert the rest of your toppings
