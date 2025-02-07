@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML Boilerplate</title>
+    <style type="text/css">
+      *{
+        background-color: burlywood;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header{
+        position: fixed;
+        height: 80px;
+        width: 200px;
+        font-size: large;
+        top: 0;
+        text-align: right;
+        right: 0;
+        z-index: 101010;
+
+      }
+      .home_main{
+        position: fixed;
+        top: 0;
+        text-align: center;
+        /* left: 50%; */
+        width: 100%;
+        font-size: 80px;
+        z-index: 1000;
+      }
+      h1{
+        font-size: 80px;
+        position: relative;
+        /* width: 100%; */
+        height: 80px;
+        top: 100px;
+        text-align: center;
+      }
+    img{
+      position: relative;
+      width: 100%;
+      height: auto;
+    }
+    article{
+      position: relative;
+      width: 60%;
+    }
+
+    p{
+      position: relative;
+      width: 100%;
+      font-size: large;
+    }
+
+    aside{
+      position: absolute;     /* I couldn't get my box to be to the side of the image, so I google and found "absolute" position, I know this isn't what we did in class but I figured I would use it since it worked? */
+      text-align: right;
+      font-size: large;
+      /* width: 400px;
+      height: auto; */
+      top: 100px;
+      right: 0;
+    }
+    .Ingredients{
+      position: absolute;
+      top: 0;
+      right: 400px;
+    }
+    .Instructions{
+      position: absolute;
+     top: 0;
+     right: 100px;
+    
+    }
+
+    </style>
+  </head>
+  <body>
+  <div class="home_main">
+    <nav>Home</nav>
+  </div>
+
+  <header>
+    <nav> 
+      <ul>
+        <li>Featured Recipes</li>
+        <li>All Recipes</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </header>
+
+    <article>
+      <h1 >Baked Potato</h1>
+      <div class="image">
+        <img src="../Homework/Images /__opt__aboutcom__coeus__resources__content_migration__serious_eats__seriouseats.com__recipes__images__2016__10__20161004-baked-potato-vicky-wasik-10-7cfe107d3d6b4c7eb73aeb73c1246735.jpg" alt="Baked Potato image">
+      </div>
+    
+      <p>
+        I grew up in Idaho. When I tell people this, one of two things happen: "Whats Idaho?" or (in a slightly less favorable scenario) I get something involving the word "Potato". So, this leaves me with two options: Ignore it, or lean into it... So here we go:    <p>
+      <hr />
+    </article>
+
+
+    <aside>
+      <div class="Ingredients">
+        <h2>Ingredients</h2>
+        <ul>
+          <li>Potato</li>
+          <li>Butter</li>
+          <li>Sour Cream</li>
+          <li>Shredded Cheese</li>
+          <li>Chives</li>
+          <li>Baco' Bits</li>
+        </ul>
+       </div>
+       <div class="Instructions">
+        <h2>Instructions</h2>
+        <ol>
+          <li>Prepare Potato by stabbing with fork, Creating little holes.</li>
+          <li>Place in microwave ~ 5 minutes</li>
+          <li>Take out with oven mitt</li>
+          <li>Slit with knife</li>
+          <li>Place butter in potato and wait to melt</li>
+          <li>Insert the rest of your toppings</li>
+          </ol>
+      </div>
+    </aside>
+    
+  </body>
+</html>

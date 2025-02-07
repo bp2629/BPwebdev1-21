@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+  /* GLOBAL STYLES */
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+html{
+    background-color: black;
+    /* this is how we get a full sized fixed cetnered backround image */
+    background: url('../img/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+
+  body {
+    /* Apply the defalt font famil, all descendents elemetns will inherant this font, we can always overide other styles further down.   */
+    font-family: 'Kaushan Script', serif;
+  }
+
+  img{
+    /* in general it makes more snese to tell images to always take up the full width of its container. 
+    and then size the contairner or frame */
+    width: 100%;
+    height: auto;
+    
+  }
+
+
+  /* GALLERY STYLES */
+
+  .container {
+    width: 900px;
+    margin: 100px auto;
+    /* when we use inline block to stack elemetns we always should zero out the font size on the cointainter */
+    font-size: 0;
+
+  }
+
+  .polaroid{
+    width: 260px;
+    margin: 20px;
+    display: inline-block;
+    /* Whenever you absoliutyl want to position something inside of another element, toyu should make sure the parent element is poisitioned relative.  */
+    position: relative;
+  }
+/*  descendant selectors  */
+  .polaroid img{
+    /* border short hand */
+    border: 10px solid #ccc;
+    border-bottom-width: 45px;
+  }
+
+
+  .polaroid p {
+    font-size: 1rem;
+    position: absolute;
+    bottom: 10px;
+    width: 260px;
+    text-align: center;
+    color: #333;
+  }
+

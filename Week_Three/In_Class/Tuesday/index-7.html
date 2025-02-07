@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Navbar</title>
+
+    <style type="text/CSS">
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+
+      body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+
+      /* descendant selector */
+      nav#main-menu ul {
+        /* remove bulletpoints */
+        list-style-type: none;
+        overflow: hidden;
+        background-color: cornflowerblue;
+        /* when we are about to use inline-block, we make the parent elemetns font size 0 */
+        font-size: 0;
+      }
+
+
+
+      
+      nav ul li{
+        display: inline-block;
+        font-size: 1rem;
+      }
+
+      nav ul li a {
+        display: block;
+        width: 100px;
+        padding: 20px;
+        text-align: center;
+        /* remove defalt A stylings */
+        text-decoration: none;
+        color: chartreuse;
+
+      }
+ /* below there can be hover or vististed */
+      nav a:hover {
+        background-color: rgba(0, 0, 0, .2);
+      }
+
+
+      nav a.active{
+        background-color: dodgerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav id="main_menu">
+        <ul>
+          <li><a href="">link1</a></li>
+          <li><a href="">link2</a></li>
+          <li><a href="">link3</a></li>
+          <li><a href="">link4</a></li>
+
+        </ul>
+
+      </nav>
+    </header>
+  </body>
+</html>
