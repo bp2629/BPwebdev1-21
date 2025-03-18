@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>contact me</title>
+    <script type="text/javascript">
+        // declar a variable
+        var myVar
+        // assign a vlaue to the variable
+        myVar = '20'
+        var myVar2 = 15
+
+        console.log(myVar)
+        console.log(typeof myVar)
+
+        // java scrip will let you do this, beware !
+        console.log(myVar + myVar2)  // incorrect. 
+        console.log(myvar * myVar2) // 300 correct. 
+        console.log(5 * 'fourty 4')   // not a number 
+
+        var message  = 'hello'
+        var recipiant =  'world'
+        console.log(message + recipiant)
+
+        //  if you want to insert a variable inside of a longer message to display to the user
+        var temp = 55
+        console.log('todays tempatrure is 55 degrees.' + temp + 'degrees f')
+
+        // booleans using the const and let keywords
+        // const key wrod needs a value immediatly assigned. 
+        const isOn = false
+        let isOff 
+
+        let conditionalMessage
+
+        if (isOn) {
+            conditionalMessage = 'The lights are on'
+        }   else {
+            conditionalMessage = 'the lights are off'
+        }
+        alert(conditionalMessage)
+        const myNum = 80
+        const anotherMessage = `My favorite number is ${myNum} and her eis mroe wwoerds.......`
+
+        console.log(anotherMessage)
+
+
+
+        function printMessage() {
+            console.log('hello worlds')
+        }
+
+        printMessage()
+
+        const printMessage = (name) => {
+            console.log("jello is yimmu")
+        } 
+
+
+
+        function sumValues(a,b){
+            return a+ b 
+        }
+
+        const newNumber = sumValues(1245, 508439709342857)
+        console.log(newNumber)
+
+
+
+        var isOff = true
+
+        function switchOnOff(){
+            if (isOff == true)
+            alert(`isOff is currently ${isOff}, switching to fasle now `)
+            isOff = false
+            else if (ifOff === false){
+                alert(`isOff is currently ${isOff}, switching to fasle now `)
+                isOff = true
+            }
+
+    
+        }
+
+
+
+        switchOnOff()
+        switchOnOff()
+
+
+
+        function counToN(n){
+            for(var i =1; i <=n; i++){
+                console.log(i)
+            }
+        }
+
+
+        counToN(20)
+
+
+
+    </script>
+
+
+  </head>
+  <body id="Tech">
+    
+  </body>
+</html>

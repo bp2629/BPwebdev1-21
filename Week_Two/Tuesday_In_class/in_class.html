@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML Forms</title>
+  </head>
+  <body>
+    <h1>HTML Form Elements</h1>
+    <!-- Form Using Basic Input Types -->
+     <!-- For more on form elements, peep the "w3 schools  for element "tutorials -->
+      <p>
+        The form action attribute ususally contains a link to a file or location to process for data
+      </p>
+      <!-- <form action="js/create-profile.js" method ="GET" target="_self" name="user_create"> </form> -->
+      <p>The name attribute for the form element = how a script can differntiate this for from others. Or it will tells us what table in the DB to write to</p>
+      <form name="user_create"></form>
+      <fieldset>
+        <legend>Simple Text Inputs</legend>
+        <p>This is your most basic text input. we change input tupes with the type attribute. </p>
+        <label for="First Name"> First Name </label>
+        <input name="First Name" type="text">
+
+        <label for="Last_name">Last Name</label>
+        <input name="Last_name" type="text" maxlength="10" placeholder="Smith" required>
+        
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Checkboxes</legend>
+        <p>CheckBoxes allow the user to select more than one option/value for the same feild <em>Each checkbox in the same group has the same name but different values!</em></p>
+        <p>What pets do you have ?</p>
+        <input name="pet" type="checkbox" value="dog"><label for="pet">dog</label>
+        <input name="pet" type="checkbox" value="cat"><label for="pet">cat</label>
+        <input name="pet" type="checkbox" value="chicken"><label for="pet">chicken</label>
+        <input name="pet" type="checkbox" value="lizard"><label for="pet">lizard</label>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Radio Group</legend>
+        <p>Radio buttons allow the user to selcect only ONE optionor value for the same feild /group</p>
+        <p>which is your favoirte? </p>
+        <input name ="favorite" type="radio" value="dog" /><label for="">Dog</label>
+        <input name ="favorite" type="radio" value="cat" /><label for="">Cat</label>
+    </fieldset>
+
+      <fieldset>
+        <legend>Common Input Types</legend>
+        <label for="Age"> Age:</label>
+        <input type="number" name="age" step=".01" max="100" min="10">
+        <input type="button" value="submit" name="user_submit" >
+        <label for="password">Password</label>
+        <input type="password" name="password">
+        <label for="color">favorite color</label>
+        <input type="color" name="favorite color">
+      </fieldset>
+
+      <fieldset>
+        <legend>Select Options Dropdowns</legend>
+        <label for="state">Pick a state</label>
+        <select name="state" id=""><option value="NY">New York</option><option value="ID">Idaho</option></select>
+      </fieldset>
+      <p>Text areas are for sentence or paragraphs for long responses</p>
+      <label for="Question">What is your question</label>
+      <textarea name="Question" cols="50" rows="10"></textarea>
+
+      <input type="button" value="submit" name="user_submit" >
+      <button title="This is a much better submit botton in my opinion" name="submit_user"></button>
+  </body>
+</html>

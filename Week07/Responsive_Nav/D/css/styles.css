@@ -1,0 +1,162 @@
+/* global stlyes */
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* DESKTOP FIRST DESIGN PATTERN */
+
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../image/more-leaves.png');
+    padding: 0 2rem;
+    position: relative;
+
+}
+
+.brand{
+    margin: 0;
+    font-weight: 300;
+    
+}
+
+
+header a {
+    color: #aaa;
+    text-decoration: none;
+}
+.mobile-menu{
+    display: none;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.menu li {
+    min-width: 5rem;
+
+}
+
+.menu li a {
+    display: block;
+    padding: 1rem;
+    
+}
+
+.menu li a:hover {
+    color: #eee;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.containter{
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.thumb{
+    width: 23%;
+    margin: 1rem;
+    margin: auto;
+
+}
+
+/* media quaries */
+
+/* Note: if you style desktop first, you want to get progressivly smaller with each media quary. */
+
+
+/* TABLET */
+
+
+/* PHONES */
+
+@media screen and (max-width:1024px) {
+    body{
+        background-color: greenyellow;
+    }
+    .thumb{
+        width: 45%;
+
+    }
+
+
+}
+
+
+@media screen and (min-width: 768px) {
+    body{
+        background-color: green;
+    }
+
+    .containter{
+        flex-direction: column;
+    }
+
+    .header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        padding: 0;
+
+    }
+
+    .brand{
+        margin: 0.5rem;
+
+    }
+
+    .mobile-menu{
+        display: block;
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        color: #aaa;
+        font-size: 2.5rem;
+        cursor: pointer;
+
+    }
+    .menu{
+        flex-direction: column;
+        width: 100%;
+    }
+    .menu li{
+        border-bottom: 1px solid rgba(255, 255, 255, .2);
+        text-align: center;
+    }
+    .thumb{
+        width: 100%;
+
+    }
+    nav{
+        display: none;
+    }
+
+    /* Only added and removed aka toggled the JS */
+    .show {
+        display: block;
+
+    }
+    
+}

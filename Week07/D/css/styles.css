@@ -1,0 +1,152 @@
+/* GLOBAL STYLES */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* DESKTOP FIRST DESIGN PATTERN */
+
+.footer_header {
+  display: none;
+  /* display: flex; */
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.footer_brand {
+  margin: 0;
+  font-weight: 300;
+}
+
+.footer_header a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.footer_mobile-menu {
+  display: none;
+}
+
+.footer_menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer_menu li {
+  min-width: 5rem;
+}
+
+.footer_menu li a {
+  display: block;
+  padding: 1rem;
+}
+
+.footer_menu li a:hover {
+  color: #eee;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* .container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.thumb {
+  width: 23%;
+  margin: 1rem auto;
+} */
+
+/* Media Queries */
+/* NOTE: if you style desktop first,
+you want to get progressively smaller
+with each media query */
+
+/*  TABLET */
+/* @media screen and (max-width: 1024px) {
+  body {
+    background-color: white;
+  }
+
+  .thumb {
+    width: 45%;
+  }
+} */
+
+/* PHONES */
+@media screen and (max-width: 768px) {
+  body {
+    background-color: white;
+  }
+
+
+
+  .footer_header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+ 
+  .footer_brand {
+    margin: 0.5rem;
+  }
+
+  .footer_mobile-menu {
+    display: block;
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    color: #aaa;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .footer_menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer_menu li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+  }
+
+  /* .container {
+    flex-direction: column;
+  }
+
+  .thumb {
+    width: 100%;
+  } */
+
+  nav {
+    display: none;
+  }
+
+  /* only added/removed aka toggled via JS */
+  .show {
+    display: block;
+  }
+}
