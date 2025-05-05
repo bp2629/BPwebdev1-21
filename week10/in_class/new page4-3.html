@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS MATH METHODS</title>
+    <script type="text/javascript">
+      // event listener is key . 
+      document.addEventListener("DOMContentLoaded", function (){
+        let myBtn = document.getElementById('changeBtn')
+        myBtn.addEventListener('click', changeClass)
+      })
+
+      function changeClass(){
+        const userN = document.getElementById('num')
+        console.log(typeof userN.value)
+        // but we don't want a string we want an integer! 
+        const n = parseInt(userN.value)
+        console.log(typeof n)
+
+        const h = document.getElementById('changeMe')
+
+        switch(n){
+          case 0:
+            h.className = 'red'
+            break
+          case 1:
+            h.className = 'green'
+            break
+          case 2:
+            h.className = 'blue'
+            break
+          case 3:
+            h.className = 'purple'
+            break
+          default: 
+          // the defaly is always needs to be ehre. 
+            break
+
+        }
+
+      }
+    </script>
+    <style type="text/css">
+      h1{
+        text-transform: uppercase;
+      }
+
+      .red{
+        color: red;
+      }
+
+      .blue{
+        color: blue;
+      }
+
+      .green{
+        color: green;
+      }
+
+      .purple{
+        color: purple;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1 id="changeMe">Get user input to change my style</h1>
+
+    <form action="">
+      <fieldset>
+        <legend>Pick a number between 0 and 3</legend>
+        <input type="number" name="num" id="num" min="0" max="3" step="1" required>
+        <button type="button" id="changeBtn" class="btnClass sillyClass">Click to change the color class of the h1</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS MATH METHODS</title>
+    <script type="text/javascript">
+    
+      const months = {
+        "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December",
+      }
+
+      console.log(months.length)
+
+      // romve the last slot/item/month in our array using .pop()
+      // pop returns the removed value, so that we can store it elswhere. 
+      const LastMoth = months.pop()
+      console.log(`we just removed the month of ${months} anad nour new arry length is ${months.length}`)
+
+      // if we want to addd our last month back in push it to the end
+
+      months.push(lastMonth)
+      months.push(vacionemeber)
+      console.log(months)
+
+      months.pop()
+
+      // use a loop or recursion to list our ever month in our array. 
+      for(var i=0; i< months.length; i++){
+        console.log(`The month of ${months[i]} is in slot ${i}`)
+      }
+      // loop through our months array backwards and delete the alst item using pop
+      // while also adding the removed item into a new array full of backwards months. 
+      let backMonths = []
+      for (var i = months.length; i>0; i--){
+  
+        const delMonth = months.pop()
+        backMonths.push(delMonth)
+        console.log(`Just deleted ${delMonth} our months array length is now ${months.length}`````)
+      }
+
+      console.log(months.length)
+      console.log(backMonths)
+
+
+      const ri = Math.floor(Math.random()*backMonths.length)
+      // access a random item in our array
+
+      console.log(backMonths[ri])
+
+
+
+
+
+    </script>
+  </head>
+  <body>
+  
+  </body>
+</html>

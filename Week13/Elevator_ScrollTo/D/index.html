@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Elevator Scrolling GSAP</title>
+    <style type="text/css" media="screen">
+      body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 40px 0;
+        padding-top: 100px;
+        background-color: black;
+        color: white;
+      }
+
+
+      main{
+        margin: 0 auto;
+        width: 800px;
+
+      }
+
+      section{
+        padding: 20px 0 80px 0;
+        height: 1000px;
+
+      }
+
+      section h2{
+      font-size: 48px;
+      border-bottom: 2px solid grey;
+      padding-bottom: 20px;
+      }
+
+      ul{
+        position: fixed;
+        top: 40%;
+        right: 0;
+        list-style-type: none;
+      }
+      li {
+        width: 30px;
+        padding: 10px;
+        margin-bottom: 1px;
+        color: grey;
+        border-left: 10px solid #333;
+        cursor: pointer;
+        transition: all 1s;
+      }
+
+      .active{
+        color: white;
+        border-left: 20px solid white;
+        line-height: 30px;
+
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <!-- elevator buttons -->
+    <ul>
+      <li id="floor5Btn">5</li>
+      <li id="floor4Btn">4</li>
+      <li id="floor3Btn">3</li>
+      <li id="floor2Btn">2</li>
+      <li id="floor1Btn">1</li>
+    </ul>
+
+    <!-- floors -->
+    <div id="main">
+      <section id="floor5Panel">
+        <h2>Floor 5</h2>
+      </section>
+
+      <section id="floor4Panel">
+        <h2>Floor 4</h2>
+      </section>
+
+      <section id="floor3Panel">
+        <h2>Floor 3</h2>
+      </section>
+
+      <section id="floor2Panel">
+        <h2>Floor 2</h2>
+      </section>
+
+      <section id="floor1Panel">
+        <h2>Floor 1</h2>
+      </section>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
+    <script type="text/javascript">
+// wait for dom to load then assign our event listener s and elemnts to vars. 
+      document.addEventListener('DOMcontentLoaded', () => {
+
+        // make everything fade in on load. 
+        gsap.from('body', 1, {opacity: 0, duration: 1})
+
+        // make our elevator buttons zoom in from the right
+        gsap.from('ul', {right:-500, duration: 1, delay:.5})
+
+        const floor1Btn = document.getElementById('floor1Btn')
+        const floor2Btn = document.getElementById('floor2Btn')
+        const floor3Btn = document.getElementById('floor3Btn')
+        const floor4Btn = document.getElementById('floor4Btn')
+        const floor5Btn = document.getElementById('floor5Btn')
+
+        let navButtons = document.getElementsByTagName('LI')
+
+        console.log(navButtons)
+
+        navButtons = [].slice.call(navButtons)
+
+        navButtons.forEach((button)=>{
+          button.addEventListener('mouseenter', function (){
+            gsap.to(this, {className: 'active', duration: 1})
+
+          })
+        })
+
+        navButtons.forEach((button)=>{
+          button.addEventListener('mouseleave', function (){
+            gsap.to(this, {className: '', duration: 1})
+
+          })
+        })
+
+
+        console.log(document.querySelector('#floor1panel').getBoundingClientRect().top)
+
+
+        floor1Btn.setAttribute(
+          'data-scrollpos',
+          document.querySelector('floor1panel').getBoundingClientRect().top
+        )
+        floor2Btn.setAttribute(
+          'data-scrollpos',
+          document.querySelector('floor2panel').getBoundingClientRect().top
+        )
+        floor3Btn.setAttribute(
+          'data-scrollpos',
+          document.querySelector('floor3panel').getBoundingClientRect().top
+        )
+        floor4Btn.setAttribute(
+          'data-scrollpos',
+          document.querySelector('floor4panel').getBoundingClientRect().top
+        )
+        floor5Btn.setAttribute(
+          'data-scrollpos',
+          document.querySelector('floor5panel').getBoundingClientRect().top
+        )
+
+          navButtons.forEach((btn)=>{
+
+            btn.addEventListener('click',function () {
+
+
+              const myScrollpos = this.getAttribute('data-scrollpos')
+              console.log('POSITION', myScrollpos)
+              gsap.to(window, {scrollTo: myScrollpos, ease: 'elastic.out', duration:3,
+
+              })
+            })
+
+          })
+
+
+          const initalFloor = document.getElementById('floor1Btn').getAttribute('data-scrollpos')
+
+
+
+
+
+
+
+
+      })
+
+
+    </script>
+  </body>
+</html>
+
+
+<!-- 1400 -->
+ <!-- 87.5 hours a month at 16 dollar an hour?  -->
+  <!-- equal to almost exactly 20 hours? -->
+<!-- be working 30 -->
+ <!-- then you have an extra  -->
+  <!-- 640 a month 160 a week for food and everything. -->
+
+  <!-- all you gotta do is get 30 a week.  -->
+
+  <!-- 20 a week to chill pay rent -->
+
+
+  <!-- 25 a week -->
+
+  <!-- basically 3 and some @ 8 hours a days. -->
+
+<!-- That would be like 50 bucks a week for food. I can muthafuckin eat cheap.  --> 
+ <!-- bahhhhh call luke asap  -->
+
+ <!-- ben I will not go broke. I have those business savings.  -->
+
+ <!-- right now I have ~300 -->
+  <!-- probably -30 a week on fucking whatever.  -->
+   <!-- And uh , I have work a 6 7 8     and I will work a 8 and an 8  -->
+
+   <!-- 37 hours so far  --> 
+    <!-- 87 is the total.  -->
+     <!-- soooooo, 50 hours before, june 1 -->
+
+     <!-- thats 5 weeks, -->
+      <!-- 10 hours a week min -->
+       <!-- 10 hours a week boost -->
+
+     <!-- if I work an average 20 hours a weeks.  -->
+      <!--  for 5 weeks, thats a 10 in the bank. -->
+        <!-- 160 by 5  -->
+         <!-- that would be 800 for the 5 weeks.  ie 160 a week for food and bank and moving in. 
+          Do - e -->
+
+          <!-- I just need to make sure that I work every other 3 2 etc.  -->
+
+          <!-- deadass keep applying to jobs tho fr. Don't care.  -->
+
+          <!-- feel like 75 a week is a good moment. 
+           
+          so an extra 300 a month. -->
+
+          <!-- and say 25 hours a week.  -->
+
+          <!-- thats literally just 17, so mroe like actually 20 -->
+
+
+
+
+          <!-- 20 dolla a week for next 5 week.  -->

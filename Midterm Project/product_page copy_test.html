@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/style_main.css"  />
+    <script type="text/javascript">
+
+      document.addEventListener('DOMContentLoaded', function () {
+        // NAV
+        const hamburger = document.getElementById('hamburger')
+        hamburger.addEventListener('click', toggleMenu)
+      
+        // SHIPPING
+        document.getElementById('calcBtn').addEventListener('click', calcShipping)
+
+        // LOCATION
+        getLocation()
+      })
+      
+      // NAV
+      function toggleMenu() {
+        const navbar = document.getElementById('main-nav')
+        navbar.classList.toggle('show')
+      }
+      // NAV 
+      
+      // LOCATION
+      function getLocation() {
+        if (navigator.geolocation && navigator.geolocation.getCurrentPosition) {
+          navigator.geolocation.getCurrentPosition(setPosition, showError)
+        } else {
+          alert('Your browser does not support geolocation.')
+        }
+      }
+      
+      const setPosition = (position) => {
+        const userLat = position.coords.latitude
+        const userLon = position.coords.longitude
+        
+
+        const fedexLat = 40.6928 
+        const fedexLon = -73.9861
+      
+        const distance = haversineDistance(userLat, userLon, fedexLat, fedexLon)
+    
+
+        document.getElementById('userDistance').innerHTML = `You are approximately ${distance.toFixed(2)} miles away.` 
+
+        document.getElementById('base').value = distance.toFixed(2) //where location meets shipping
+      }
+      // Error 
+      function showError(error) {
+        const userDistance = document.getElementById('userDistance')
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            userDistance.innerHTML = 'User denied the request for geolocation.' 
+            break
+          case error.POSITION_UNAVAILABLE:
+            userDistance.innerHTML = 'The location info is not available.'
+            break
+          case error.TIMEOUT:
+            userDistance.innerHTML = 'The location request timed out.'
+            break
+          case error.UNKNOWN_ERROR:
+            loc.innerHTML = 'An unknown error occured.'
+            break
+          default:
+            userDistance.innerHTML = 'An unknown error occurred.'
+            break
+        }
+      }
+      
+      // 'Haversine Equation' -- Convert LAT LON to distance in miles
+      function haversineDistance(lat1, lon1, lat2, lon2) {
+        const R = 3958.8;
+        const rlat1 = lat1 * (Math.PI/180);
+        const rlat2 = lat2 * (Math.PI/180);
+        const difflat = rlat2-rlat1;
+        const difflon = (lon2-lon1) * (Math.PI/180);
+      
+        const a = Math.sin(difflat/2) * Math.sin(difflat/2) + Math.cos(rlat1) * Math.cos(rlat2) * Math.sin(difflon/2) * Math.sin(difflon/2);
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+      
+        const distance = R * c;
+      
+        return distance;
+      }
+      
+      // Shipping Calculation Bleow
+      function calcShipping(event) {
+        event.preventDefault()
+        
+        const result = document.getElementById('shippingResult')
+        result.innerHTML = ''
+      
+        let base = document.getElementById('base').value
+        base = parseFloat(base)
+        base = 16 + ((base/100 )** 1.15)    //magic line
+        base = moneyRound(base)
+      
+        let additional 
+        let total 
+      
+        const arrShip = document.getElementsByName('ship')
+        for (var i = 0; i < arrShip.length; i++) {
+          if (arrShip[i].checked) {
+            additional = parseFloat(arrShip[i].value)
+            break
+          }
+        }
+      
+        additional = moneyRound(additional)
+        total = moneyRound(base + additional)
+      
+        let p1 = document.createElement('P')
+        let p2 = document.createElement('P')
+        let p3 = document.createElement('P')
+      
+        let t1 = document.createTextNode(`Base Shipping: $${base}`)
+        let t2 = document.createTextNode(`Added/Expidited Cost: $${additional}.00`)
+        let t3 = document.createTextNode(`Total Shipping: $${total}`)
+      
+        p1.appendChild(t1)
+        p2.appendChild(t2)
+        p3.appendChild(t3)
+      
+        result.appendChild(p1)
+        result.appendChild(p2)
+        result.appendChild(p3)
+      }
+      
+      function moneyRound(num) {
+        return Math.ceil(num * 100) / 100
+      }
+      </script>
+  </head>
+  <body>
+
+    <header>
+      <h1><a href="./home_page.html">cab3.za</a></h1>
+  </header>
+
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="./home_page.html" >home</a></li>
+          <li><a href="./about_page.html">about</a></li>
+          <li><a href="./campaigns(slideshowupdate).html">campaigns</a></li>
+          <li><a href="https://www.instagram.com/cabeza_skateboards/">instagram</a></li>
+          <li><a href="mailto:cabeza.skateboards@gmail.com">email</a></li>
+        </ul>
+      </nav>
+    </footer>
+
+
+    <footer_header>
+      <span class="footer_mobile-menu" id="hamburger">&#8801;</span>
+      <nav id="main-nav">
+        <ul class="footer_menu">
+          <li><a href="./home_page.html" ></a></li>  
+          <li><a href="./home_page.html" >home</a></li>
+          <li><a href="./about_page.html">about</a></li>
+          <li><a href="./campaigns(slideshowupdate).html">campaigns</a></li>
+          <li><a href="https://www.instagram.com/cabeza_skateboards/">instagram</a></li>
+          <li><a href="mailto:cabeza.skateboards@gmail.com">email</a></li>
+        </ul>
+      </nav>
+    </footer_header>
+        <div class="page">
+
+          <div class="item1">
+    
+            
+            <h2>Specs:</h2>
+            <ul>
+              <li>100% Canadian Hard Rock Maple</li>
+              <li>Handmade</li>
+              <li>Screenprinted</li>
+            </ul>
+            
+    
+          </div>
+    
+          <div class="item2 center">
+            <img class="first" src="img/bw/NU3UAXPXC7MLDMCOG3RYOSPK.png" />
+            <img  src="img/bw/pi6.png" />
+          </div>
+          
+    
+          <div class="item3 ">
+    
+            <p>
+            <h2>Contact To Purchase:</h2>
+            <ul>
+              <li>Text: 208-555-5555</li>
+              <li>Dm on instagram</li>
+              <li>Send an email </li>
+            </ul>
+            </p>
+
+            <div class="shipping_container">
+              <h1>Determine Shipping:</h1>
+              <form>
+                <p id="userDistance">Finding your distance</p>
+                <!-- <br /> -->
+                <input type="hidden" name="base" id="base" />
+                <!-- <br /> -->
+               
+                <label><input type="radio" name="ship" value="0.00" />Standard ($0.00)</label>
+                <br />
+                <label><input type="radio" name="ship" value="30.00" />Express 3-Day ($30.00)</label>
+                <br />
+                <label><input type="radio" name="ship" value="80.00" />Overnight ($80.00)</label>
+        
+        
+                <br />
+                <button type="submit" id="calcBtn">Calculate Shipping</button>
+              </form>
+        
+              <div class="well" id="shippingResult"></div>
+            </div>
+    
+          </div>
+    
+          </div>
+        </div>
+    
+       
+
+
+  </body>
+</html>
+

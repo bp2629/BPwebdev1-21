@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JS MATH METHODS</title>
+    <script type="text/javascript">
+      // make an array or random image sources containting goats, off the internet. 
+      // make an array of links to the pages that contain that image. 
+      const arrImg = [
+      'https://upload.wikimedia.org/wikipedia/commons/b/b2/Hausziege_04.jpg', 'https://www.woldswildlife.co.uk/media/cache/list_image_not_full/images/uploads/animal_list_images/capybara-1_C7oK.jpg','https://www.lvzoo.org/wp-content/themes/lvzoo/timthumb.php?src=https://www.lvzoo.org/wp-content/uploads/2022/02/alpine.jpg&w=776&h=771',
+
+
+      ]
+
+      const arrLink = [
+        "https://westfeeds.com/guide-to-goat-feed-and-nutrition/","https://www.woldswildlife.co.uk/our-wildlife-park/animals/domestic/boer-goats",'https://www.lvzoo.org/animals/alpine-goat/',
+      ]
+
+      function randIndex(max){
+        return Math.floor(Math.random()*max)
+      }
+
+
+      function loadRandomImage(){
+        const index = randIndex(arrImg.length)
+        const img = document.getElementById('animal')
+        const link = document.getElementById('dynLink')
+
+
+        img.src = arrImg[index]
+        link.href = arrLink[index]
+      }
+
+
+      document.addEventListener(`DOMContentLoaded`, function (){
+        // get elemtns by ID and store them in global variables
+        // assign any other listerners to element on the apge
+        // call al lfunctions we want to fire wehnt he page loads. 
+        loadRandomImage()
+      })
+
+      // document.addEventListener(`DOMContentLoaded`, loadRandomImage)
+
+
+      // Dont do on click or on load !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+
+
+    </script>
+  </head>
+  <body>
+
+    <a href="#" target="_blank" id="dynLink"><img id="animal" src="" alt="A random photo"></a>
+  
+  </body>
+</html>

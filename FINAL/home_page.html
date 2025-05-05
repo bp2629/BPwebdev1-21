@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/style_main.css"  />
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function () {
+        const hamburger = document.getElementById('hamburger')
+        hamburger.addEventListener('click', toggleMenu)
+      })
+
+      function toggleMenu() {
+        const navbar = document.getElementById('main-nav')
+        navbar.classList.toggle('show')
+      }
+    </script>
+  </head>
+  <body>
+
+    <header>
+      <h1><a href="./home_page.html">cab3.za</a></h1>
+  </header>
+
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="./home_page.html" >home</a></li>
+          <li><a href="./about_page.html">about</a></li>
+          <li><a href="./campaigns(slideshowupdate).html">campaigns</a></li>
+          <li><a href="https://www.instagram.com/cab3.za/">instagram</a></li>
+          <li><a href="mailto:cabeza.skateboards@gmail.com">email</a></li>
+        </ul>
+      </nav>
+    </footer>
+
+
+    <footer_header>
+      <span class="footer_mobile-menu" id="hamburger">&#8801;</span>
+      <nav id="main-nav">
+        <ul class="footer_menu">
+          <li><a href="./home_page.html" ></a></li> 
+          <li><a href="./home_page.html" >home</a></li>
+          <li><a href="./about_page.html">about</a></li>
+          <li><a href="./campaigns(slideshowupdate).html">campaigns</a></li>
+          <li><button id="scrollToMiddle">jump to clothing</button></li>
+          <li><a href="https://www.instagram.com/cabeza_skateboards/">instagram</a></li>
+          <li><a href="mailto:cabeza.skateboards@gmail.com">email</a></li>
+        </ul>
+      </nav>
+    </footer_header>
+
+
+    <div class="container center">
+      <div class="product fade_out" id="skateboards_start">
+        <a href="./product_page.html">
+          <img class="main" src="img/bw/NU3UAXPXC7MLDMCOG3RYOSPK.png" />
+          <img class="alt" src="img/bw/pi6.png" />
+        </a>
+      </div>
+      <div class="product fade_out">
+        <a href="./product_page copy.html">
+          <img class="main" src="img/bw/pi2.png" />
+          <img class="alt" src="img/bw/pi6.png"/>
+        </a>
+      </div>
+      <div class="product fade_out">
+
+        <a href="./product_page copy 2.html">
+          <img class="main" src="img/bw/pi3.png" />
+          <img class="alt" src="img/bw/pi6.png" />
+        </a>
+      </div>
+
+
+
+      
+      <div class="product fade_out">
+
+        <a href="./product_page copy 3.html">
+          <img class="main" src="img/bw/pi4.png" />
+          <img class="alt" src="img/bw/pi6.png" />
+        </a>
+      </div>
+      <div class="product fade_out">
+
+        <a href="./product_page copy 4.html">
+          <img class="main" src="img/bw/pi5.png" />
+          <img class="alt" src="img/bw/pi6.png" />
+        </a>
+      </div>
+      <div class="product fade_out">
+
+        <a href="./product_page copy 5.html">
+          <img class="main" src="img/bw/pi7.png" />
+          <img class="alt" src="img/bw/pi6.png" />
+        </a>
+      </div>
+
+
+
+      <div class="product fade_out"  id="clothing-start">
+
+        <a href="./product_page copy 6.html">  
+          <img class="main" src="img/bw/pi8.png" />
+          <img class="alt" src="img/bw/pi9.png" />
+        </a>
+      </div>
+      <div class="product fade_out">
+
+        <a href="./product_page copy 7.html">
+          <img class="main" src="img/bw/pi11.png" />
+          <img class="alt" src="img/bw/pi12.png" />
+        </a>
+      </div>
+      <div class="product fade_out">
+        <a href="./product_page copy 8.html">
+        <img class="main" src="img/bw/pi13.png" />
+        <img class="alt" src="img/bw/pi14.png" />
+      </a>
+      </div>
+
+
+
+
+      <div class="product fade_out">
+
+        <a href="./product_page copy 9.html">
+          <img class="main" src="img/bw/pi15.png" />
+          <img class="alt" src="img/bw/pi16.png" />
+        </a>
+      </div>
+      <div class="product fade_out">
+
+        <a href="./product_page copy 10.html">
+          <img class="main" src="img/bw/pi17.png" />
+          <img class="alt" src="img/bw/pi18.png" />
+        </a>
+      </div>
+      <div class="product fade_out">
+        <a href="./product_page copy 11.html">
+        <img class="main" src="img/bw/pi19.png" />
+        <img class="alt" src="img/bw/pi20.png" />
+      </a>
+      </div>
+    </div>
+
+    <button id="scroll_back_to_middle">Back to top of Clothing</button>
+    <button id="scroll_to_skateboards">Back to Skateboards</button>
+
+
+
+    
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    
+    <script>
+    
+      document.addEventListener('DOMContentLoaded', function () {
+        const button = document.getElementById('scrollToMiddle');
+        if (button) {
+          button.addEventListener('click', function () {
+            gsap.to(window, {
+              scrollTo: "#clothing-start",
+              ease: 'steps(12)',
+              duration: .8,
+            });
+          });
+        }
+      });
+
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const button = document.getElementById('scroll_back_to_middle');
+        if (button) {
+          button.addEventListener('click', function () {
+            gsap.to(window, {
+              scrollTo: "#clothing-start",
+              ease: 'steps(12)',
+              duration: .8,
+            });
+          });
+        }
+      });
+
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const button = document.getElementById('scroll_to_skateboards');
+        if (button) {
+          button.addEventListener('click', function () {
+            gsap.to(window, {
+              scrollTo: "#skateboards_start",
+              ease: 'steps(12)',
+              duration: .8,
+            });
+          });
+        }
+      });
+    </script>
+
+
+
+
+
+
+  </body>
+</html>

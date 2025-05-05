@@ -161,6 +161,19 @@ nav a:hover{
   padding: 1rem;
 }
 
+.footer_menu button {
+  border: none;
+  margin-top: 25px;
+  /* margin-bottom: 15px; */
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  font-family: 'Montserrat';
+  width: 100%;
+  height: 30px;
+}
+
+
 
 /* HAMBURGER ABOVE */
 
@@ -213,6 +226,16 @@ nav a:hover{
   width: 260px;
   color: rgb(255, 255, 255);
 }
+
+/* button {
+  border: 1px solid white;
+  font-size: 22px;
+  background-color: black;
+  color: white;
+  font-family: 'Montserrat';
+  width: 100%;
+  height: 1px;
+} */
 /* GALLERY ABOVE*/
 
 
@@ -245,20 +268,29 @@ nav a:hover{
   flex-wrap: wrap;
   justify-content: space-evenly;
   min-height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .item1 {
+  padding: 3px;
+  margin: 0 auto;
+  line-height: 40px;
+  margin-top: 5%;
+  border: 1px solid gray;
+  border-radius: 10px;
   background-color: black;
   color: #ffffff;
   left: 0;
   width: 23%;
-  height: 300px;
+  height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
-  top: 300px;
+  top: 200px;
+
+
+  
   
 }
 
@@ -299,24 +331,43 @@ nav a:hover{
 
 .item3 {
   background-color: black;
+  margin: 0 auto;
+  line-height: 40px;
+  margin-top: 5%;
+  border: 1px solid gray;
+  border-radius: 10px;
   color: #ffffff;
+
+  align-items: left;
   right: 0;
   width: 23%;
-  height: 300px;
+  /* height: 300px; */
+  
+  /* height: 100%; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* position: relative; */
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  position: relative;
-  top: 300px;
+  overflow-y: auto;
+
+  /* justify-content: flex-start; */
+  /* position: relative; */
+  /* top: 300px; */
   
 }
 
+
 .item3 h2 {
-  margin-top: 0; 
-  margin-bottom: 10px;
+  /* margin-top: 0;  */
+  top: 100px;
+  width: 100%;
 }
 
 .item3 ul {
+
   padding-left: 20px; 
 }
 
@@ -329,6 +380,52 @@ nav a:hover{
   justify-content: center;
   align-items: center;
 }
+
+/* SHIPPING BELOW */
+
+.shipping_container {
+  width: 100%;
+  margin: 0 auto;
+  line-height: 40px;
+  margin-top: 5%;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 13px;
+}
+
+.well {
+  border-radius: 10px;
+  background-color: #545454;
+  min-height: 100px;
+  padding: 20px;
+}
+
+.shipping_container button {
+  width: 100%;
+  padding: 10px 0;
+  border: 2px solid gray;
+  cursor: pointer;
+  margin: 10px 0;
+  color: white;
+  background-color: #333;
+  transition: background-color 1s ease;
+}
+
+.shipping_container button:hover {
+  background-color: #777;
+}
+
+input[type='number'] {
+  width: 100%;
+  padding: 10px 0;
+  border: 1px solid gray;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 12px;
+}
+
+
 /* PRODUCT PAGE ABOVE */
 
 
@@ -351,9 +448,12 @@ nav a:hover{
 }
 
 .about_container p{
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 25px;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 25px;
   bottom: 100px;
 }
 
@@ -371,7 +471,39 @@ nav a:hover{
 
 /* STYLES FOR CAMPAIGN PAGE */
 
-.camp_container{
+.carousel-indicators [data-bs-target]{
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  text-indent: 0;
+  font-size: 20px;
+  color: white;
+}
+
+#firstSlider {
+  margin-top: 100px; /* still needed to push it under the header */
+  background-color: black;
+}
+
+#firstSlider .carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ /* optional: for background color */
+}
+
+#firstSlider img {
+  max-height: calc(100vh - 100px); /* so image never grows bigger than screen */
+  width: auto;
+  height: auto;
+  object-fit: contain; /* safe fallback */
+  background-color: black;
+}
+.carousel-caption h5,
+.carousel-caption p {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+/* .camp_container{
   color: #ffffff;
   top: 100px;
   display: flex;
@@ -391,7 +523,7 @@ nav a:hover{
   padding-right: 25%;
   padding-top: 10px;
   padding-bottom: 25px;
-}
+} */
 
 /* STYLES FOR CAMPAIGN PAGE */
 
@@ -467,6 +599,16 @@ nav a:hover{
   .show {
     display: block;
   }
+
+  button {
+    border: 1px solid white;
+    font-size: 22px;
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat';
+    width: 100%;
+    height: 40px;
+  }
   /* HAMBURGER ABOVE */
 
  
@@ -475,7 +617,49 @@ nav a:hover{
 
 
   /* PRODUCT PAGE BELOW */
+
+  .page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+
+  }
+  .item1 {
+    order: 2; /* show second */
+    /* margin-top: 20px; */
+    top: 20px;
+    height: auto;
+    align-items: left;
+    position: relative;
+    width: 90%;
+    /* margin-top: 20px; */
+  }
+  
   .item2 {
+    order: 1; /* show first */
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap; 
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative; 
+    width: 90%;
+    /* padding-top: 100px; */
+    top: 70px;
+    height: 400px;
+  }
+  
+  .item3 {
+    order: 3; /* show third */
+    /* margin-top: 20px; */
+    width: 90%;
+    margin-top: 10px;
+    align-items: left;
+    /* margin-top: 20px; */
+  }
+  /* .item2 {
     margin-top: 20px;
     width: 300px;
     height: 300px;
@@ -499,6 +683,8 @@ nav a:hover{
     position: relative;
     text-align: center;
     height: 50px;
+    border: 1px solid gray;
+    border-radius: 10px;
   }
   
   .item3 {
@@ -506,11 +692,62 @@ nav a:hover{
     background-color: black;
     left: 0;
     width: 90%;
-    height: 350px;
+    height: 600px;
+    overflow-y: auto;
     top: 200px;
     position: relative;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  } */
+
+  /* SHIPPING */
+  .shipping_container {
+    width: 100%;
+    margin: 0 auto;
+    line-height: 40px;
+    margin-top: 5%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 13px;
+    height: auto;
+    position: inherit;
   }
+  
+  .well {
+    border-radius: 10px;
+    background-color: #545454;
+    min-height: 100px;
+    padding: 20px;
+  }
+  
+  .shipping_container button {
+    width: 100%;
+    padding: 10px 0;
+    border: 2px solid gray;
+    cursor: pointer;
+    margin: 10px 0;
+    color: white;
+    background-color: #333;
+    transition: background-color 1s ease;
+  }
+  
+  .shipping_container button:hover {
+    background-color: #777;
+  }
+  
+  input[type='number'] {
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12px;
+  }
+  
+
 
   /* PRODUCT PAGE ABOVE */
 
@@ -543,6 +780,21 @@ nav a:hover{
 
 /* CAMPAIGN BELOW */
 
+
+.carousel-item {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.carousel-caption {
+  position: static; /* removes absolute positioning */
+  margin-top: 20px; /* gives space below the image */
+  text-align: center; /* centers the text */
+}
+/* 
+
   .camp_container{
     position: relative;
     top: 100px;
@@ -563,7 +815,7 @@ nav a:hover{
     padding-top: 25px;
     padding-bottom: 25px;
   }
-  
+   */
 
 }
 

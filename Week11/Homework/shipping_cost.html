@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Find Shipping</title>
     <style type="text/css">
-      .container {
+      .shipping_container {
         width: 300px;
         margin: 0 auto;
         line-height: 40px;
@@ -22,7 +22,7 @@
         padding: 20px;
       }
 
-      .container button {
+      .shipping_container button {
         width: 100%;
         padding: 10px 0;
         border: 2px solid gray;
@@ -33,7 +33,7 @@
         transition: background-color 1s ease;
       }
 
-      .container button:hover {
+      .shipping_container button:hover {
         background-color: #777;
       }
 
@@ -63,8 +63,8 @@
         let base = document.getElementById('base').value
        
         base = parseFloat(base)
-        base = 18 + ((base/100 )** 1.15) 
-        // $18 base charge. Up to ~ $50 for domestic shipping. 
+        base = 16 + ((base/100 )** 1.15) 
+        // $16 base charge. Up to ~ $50 for domestic shipping. 
         base = moneyRound(base)
 
        
@@ -115,7 +115,7 @@
     </script>
   </head>
   <body>
-    <div class="container">
+    <div class="shipping_container">
       <h1>Determine Shipping:</h1>
       <form>
         <label for="base">Go to google maps and find how many miles away you are from my local Fedex: 400 Jay St, Brooklyn, NY 1120. PASTE BELOW</label>

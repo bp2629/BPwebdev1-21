@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/style_main.css"  />
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function () {
+        const hamburger = document.getElementById('hamburger')
+        hamburger.addEventListener('click', toggleMenu)
+      })
+
+      function toggleMenu() {
+        const navbar = document.getElementById('main-nav')
+        navbar.classList.toggle('show')
+      }
+    </script>
+  </head>
+
+
+  <header>
+    <h1><a href="./home_page.html">cab3.za</a></h1>
+</header>
+
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="./home_page.html" >Home</a></li>
+        <li><a href="./about_page.html">about</a></li>
+        <li><a href="./campaigns.html">campaigns</a></li>
+        <li><a href="https://www.instagram.com/cab3.za/">instagram</a></li>
+        <li><a href="mailto:cabeza.skateboards@gmail.com">email</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+
+  <footer_header>
+    <span class="footer_mobile-menu" id="hamburger">&#8801;</span>
+    <nav id="main-nav">
+      <ul class="footer_menu">
+        <li><a href="./home_page.html" ></a></li> <!--This is a terrible way to do this!-->
+        <li><a href="./home_page.html" >Home</a></li>
+        <li><a href="./about_page.html">about</a></li>
+        <li><a href="./campaigns.html">campaigns</a></li>
+        <li><a href="https://www.instagram.com/cabeza_skateboards/">instagram</a></li>
+        <li><a href="mailto:cabeza.skateboards@gmail.com">email</a></li>
+      </ul>
+    </nav>
+  </footer_header>
+  <body>
+    <div class="about_container">
+        <img src="img/bw/about.jpg" alt="">
+        <p>
+        Cabeza Skateboards is a handmade skateboard company out of Boise, Idaho. All skateboards are made completely from scratch and by hand. All clothing is silk screened using 100% water-based inks and hand pulled screens. Now here is this description again to look like there is more to say. Cabeza Skateboards is a handmade skateboard company out of Boise, Idaho. All skateboards are completely from scratch and by hand. All clothing is silk screened using 100% water-based inks and hand pulled screens.
+        </p>
+    </div>
+
+  </body>
+</html>
